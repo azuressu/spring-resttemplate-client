@@ -47,6 +47,7 @@ public class RestTemplateController {
         return restTemplateService.postCall(query);
     }
 
+    // @RequestHeader 어노테이션을 사용해서 가져올 key값(Authorization)을 넣어주고 뒤에는 원하는 String 명으로 받아옴
     @GetMapping("/exchange-call")
     public List<ItemDto> exchangeCall(@RequestHeader("Authorization") String token) {
         return restTemplateService.exchangeCall(token);
